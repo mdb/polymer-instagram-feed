@@ -30,7 +30,7 @@ Additional attribute options:
 - imageSize: 'small', 'medium', or 'large'; the size of the Instagram image rendered; defaults to 'small'
 
 ```html
-<instagram-feed userId="someId" accessToken="someToken" count="10" imageSize="large"><instagram-feed>
+<instagram-feed userId="someId" accessToken="someToken" count="10" imageSize="large"></instagram-feed>
 ```
 
 ## Demo
