@@ -37,35 +37,36 @@ Additional attribute options:
 
 Install dependencies:
 
-1. Install [Node.js](http://nodejs.org/download/)
-2. Install [Grunt](http://gruntjs.com/):
+Install [Node.js](http://nodejs.org/download/)
+
+Install [Grunt](http://gruntjs.com/):
 
 ```sh
 $ npm install -g grunt-cli
 ```
 
-3. Install Node dependencies:
+Install Node dependencies:
 
 ```sh
 $ npm install
 ```
 
-4. Install bower dependencies:
+Install bower dependencies:
 
 ```sh
 $ bower install
 ```
 
-5. Run a local server:
+Run a local server:
 
 ```sh
 $ grunt connect
 ```
 
-6. Edit the `&lt;instagram-feed&grt;` in `index.html`; provide real `userId` and`accessToken` attribute
+Edit the `&lt;instagram-feed&grt;` in `index.html`; provide real `userId` and`accessToken` attribute
 values. See [Instagram developer documentation](http://instagram.com/developer/) for more info.
 
-6. Visit `http://localhost:8000` in your web browser.
+Visit `http://localhost:8000` in your web browser.
 
 ## License
 
