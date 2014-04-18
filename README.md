@@ -4,14 +4,6 @@ A [Polymer](http://polymer-project.org) element for displaying an Instgram user'
 
 Somewhat inspired by Addy Osmani's [x-instagram](http://github.com/addyosmani/x-instagram), though a bit different for my needs.
 
-## Install
-
-Using [Bower](http://bower.io), run:
-
-```bash
-$ bower install --save polymer-instagram-feed
-```
-
 ## Usage
 
 1. Import Web Components' polyfill:
