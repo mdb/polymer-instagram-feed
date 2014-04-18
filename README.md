@@ -63,7 +63,7 @@ Run a local server:
 $ grunt connect
 ```
 
-Edit the `&lt;instagram-feed&grt;` in `index.html`; provide real `userId` and`accessToken` attribute
+Edit the `<instagram-feed>` element in `index.html`; provide real `userId` and`accessToken` attribute
 values. See [Instagram developer documentation](http://instagram.com/developer/) for more info.
 
 Visit `http://localhost:8000` in your web browser.
