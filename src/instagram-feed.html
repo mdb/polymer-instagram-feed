@@ -1,0 +1,55 @@
+<link rel="import" href="../bower_components/polymer-jsonp/polymer-jsonp.html">
+
+<polymer-element name="instagram-feed" attributes="accessToken userId imageSize count">
+  <template>
+    <polymer-jsonp id="ajax" auto url="https://api.instagram.com/v1/users/{{userId}}/media/recent?access_token={{accessToken}}&count={{count}}&callback="></polymer-jsonp>
+
+    <ul class="instagram-feed">
+      <template id="items" repeat="{{item in items}}" index="i">
+        <li class="item">
+          <a href="{{item.link}}">
+            <img src="{{item.imageSrc}}">
+          </a>
+        </li>
+      </template>
+    </ul>
+  </template>
+
+  <script>
+    Polymer('instagram-feed', {
+      count: 8,
+      accessToken: '',
+      userId: '',
+      imageSize: 'small',
+      ready: function () {
+        var imageSizeMap = {
+              'small': 'thumbnail',
+              'medium': 'low_resolution',
+              'large': 'standard_resolution'
+            },
+            buildModel = function (response, context) {
+              var data = response.data,
+                  itemsLength = data.length,
+                  items = [],
+                  imageSize,
+                  i;
+
+              for (i=0; i<itemsLength; i++) {
+                imageSize = imageSizeMap[context.imageSize];
+
+                items.push({
+                  link: data[i].link,
+                  imageSrc: data[i].images[imageSize].url,
+                });
+              }
+
+              return { items: items };
+            };
+
+        this.$.ajax.addEventListener('polymer-response', function (e) {
+          this.$.items.model = buildModel(e.detail.response, this);
+        }.bind(this));
+      }
+    });
+  </script>
+</polymer-element>

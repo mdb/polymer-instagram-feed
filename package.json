@@ -1,0 +1,16 @@
+{
+  "name": "instagram-feed",
+  "version": "0.0.0",
+  "description": "A custom Polymer element for displaying a user's instagram feed",
+  "author": "Mike Ball",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mdb/instagram-feed"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-connect": "~0.5.0",
+    "grunt-cli": "~0.1.9"
+  }
+}
